@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    --popins:'Poppins', sans-serif;
+    
+    
+
+}
+
+body{
+    background-image: url(/images/bg-intro-mobile.png);
+    background-position: center;
+    background-size: cover;
+    background-color: var(--Red);
+    font-family: var(--popins);
+
+}
+.text__contein{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+    
+    text-align: center;
+    h2{
+        padding: 0 1rem 0 1rem;
+        
+        color: #fff;
+        font-size: x-large;
+        margin-bottom: .8rem;
+    }
+    p{
+        font-size: medium;
+        color: #fff;
+        line-height: 25px;
+    }
+}
+
+.form__contein{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    
+
+}
+.form__sub{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Blue);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.163);
+    transition: .5s all ease;
+    p{  
+        width: 60%;
+        color: #fff;
+        text-align: center;
+        font-weight: 400;
+    }
+    cursor: pointer;
+    &:hover{
+        background-color: hsl(154, 59%, 45%);
+        box-shadow: none;
+        
+        
+    
+    }
+
+}
+form{
+    background-color: #fff;
+    border-radius: 8px;
+    width:100%;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: static;
+    .error{
+        display: none;
+    }
+      
+    
+    
+    br + .errorA {
+     display: inline;
+     position: relative;
+     color: var(--Red);
+     text-align: end;
+     font-style: italic;
+     top: -10px;
+    
+    }
+    
+    p{
+        text-align: center;
+        font-size: small;
+        width: 95%;
+        color:var(--Grayish-Blue);
+        b{
+            color: var(--Red);
+            cursor: pointer;
+        }
+    }
+    
+    input{
+        display: block;
+        width: 100%;
+        height: 3.2rem;
+        padding-left: 1.5rem;
+        border-radius: 5px;
+        border: solid .5px var(--Grayish-Blue);
+        position: relative;
+       
+        
+        &:focus{
+            transition: .5s padding ease;
+            
+            &::placeholder{
+                color: transparent;
+               
+            }
+            padding-left: 5px;
+            
+        }
+        
+        
+       
+    }
+    
+    
+    input::placeholder{
+        font-family: var(--popins);
+        font-weight: 700;
+        
+    
+    }
+    button{
+        width: 100%;
+        height: 3.2rem;
+        background-color: var(--Green);
+        text-transform: uppercase;
+        font-family: var(--popins);
+        font-weight: 600;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition-property: background;
+        transition-duration: .5s;
+        transition-timing-function: ease;
+        &:hover{
+            background-color: var(--Red);
+            
+        }
+    }
+
+
+    .err{
+        background-image: url(/images/icon-error.svg);
+        background-repeat: no-repeat;
+        background-position: 98%;
+    
+    }
+}
+
+@media(width >= 800px){
+    body{
+        background-image: url(/images/bg-intro-desktop.png);
+       
+        background-size: 100%;
+        background-position: center bottom;
+    
+    }
+    .gridcontein{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     margin: 0 auto;
+     height: 100vh;
+     gap: 25px;
+     padding: 0 10% 0 10%;
+     
+    
+    }
+    
+    .form__contein{
+        align-self: center;
+    
+    }
+    .text__contein{
+        align-self:center;
+     h2{
+        font-size: 50px;
+        text-align: left;
+        padding: 0;
+     
+     
+     }
+     p{
+        text-align: left;
+     }
+    
+    }
+ 
+    
+
+}
