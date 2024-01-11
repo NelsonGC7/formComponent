@@ -1,7 +1,7 @@
 const formulari =  document.forms[0];
 const [Iname,Ilasn,Iemail,Ipass,Posbtn] = formulari;
-
-Posbtn.addEventListener('submit',(e)=>{
+console
+formulari.addEventListener('submit',(e)=>{
      e.preventDefault();
      let name,lasn,email,pass;
      if(Iname.value.length>=4){
