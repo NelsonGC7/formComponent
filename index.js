@@ -1,7 +1,7 @@
 const formulari =  document.forms[0];
 const [Iname,Ilasn,Iemail,Ipass,Posbtn] = formulari;
 
-Posbtn.addEventListener('click',(e)=>{
+Posbtn.addEventListener('submit',(e)=>{
      e.preventDefault();
      let name,lasn,email,pass;
      if(Iname.value.length>=4){
@@ -58,7 +58,7 @@ Posbtn.addEventListener('click',(e)=>{
         passwd:pass  
       }   
       
-      console.log(datos)
+     
     
     
     
